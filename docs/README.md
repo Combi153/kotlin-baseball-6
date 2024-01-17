@@ -1,28 +1,27 @@
 # 개발 요구사항 정리
 
-- [ ] 콘솔 입력받기
-- [ ] 난수 생성
-- [x] 입력받은 값 비교
-    - [x] 자리 비교
-    - [x] 값 비교
-- [ ] 결과 처리
-- [ ] 결과 분기
-
 Computer
 
 - [ ] 난수 생성
 
-RandomBall
+ComputerBall
 
 - [x] 자리 비교
 - [x] 값 비교
 
-Player
+PlayerBall
 
-- [ ] 콘솔 입력
+- [ ] 숫자 입력
 
-Game
+GameService
 
 - [ ] 게임 진행
-- [ ] 결과 분기
 
+Result
+
+- [ ] 결과 기록
+
+View
+
+- [ ] 콘솔 입력
+- [ ] 콘솔 출력
