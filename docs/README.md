@@ -17,9 +17,10 @@ GameService
 
 - [ ] 게임 진행
 
-Result
+GameResult
 
-- [ ] 결과 기록
+- [x] 결과 기록
+- [x] 결과 확인
 
 View
 
