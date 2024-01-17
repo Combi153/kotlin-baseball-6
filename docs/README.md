@@ -2,7 +2,7 @@
 
 Computer
 
-- [ ] 난수 생성
+- [x] 난수 생성
 
 ComputerBall
 

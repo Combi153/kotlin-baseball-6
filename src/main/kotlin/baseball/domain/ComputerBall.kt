@@ -2,7 +2,7 @@ package baseball.domain
 
 private const val START_INDEX = 0
 
-class ComputerBall(private val numbers: List<Int>) {
+class ComputerBall(val numbers: List<Int>) {
 
     fun countContainingBalls(balls: List<Int>): Int {
         return numbers.count { number -> balls.any { ball -> number == ball } }
