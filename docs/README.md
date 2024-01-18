@@ -11,11 +11,11 @@ ComputerBall
 
 PlayerBall
 
-- [ ] 숫자 입력
+- [x] 숫자 입력
 
 GameService
 
-- [ ] 게임 진행
+- [x] 게임 진행
 
 GameResult
 
