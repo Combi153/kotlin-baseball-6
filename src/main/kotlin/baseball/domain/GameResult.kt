@@ -12,6 +12,10 @@ data class GameResult internal constructor(val ballCount: Int, val strikeCount: 
         return strikeCount != EMPTY_COUNT
     }
 
+    fun hasNoCount(): Boolean {
+        return ballCount == EMPTY_COUNT && strikeCount == EMPTY_COUNT
+    }
+
     fun isEnd(): Boolean {
         return strikeCount == STRIKE_OUT_COUNT
     }
