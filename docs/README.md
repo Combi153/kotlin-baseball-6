@@ -12,6 +12,7 @@ ComputerBall
 PlayerBall
 
 - [x] 숫자 입력
+- [x] 예외 처리
 
 GameService
 
@@ -22,7 +23,12 @@ GameResult
 - [x] 결과 기록
 - [x] 결과 확인
 
+GameCommand
+
+- [x] 게임 계속하는지 확인
+- [x] 예외 처리
+
 View
 
-- [ ] 콘솔 입력
-- [ ] 콘솔 출력
+- [x] 콘솔 입력
+- [x] 콘솔 출력
