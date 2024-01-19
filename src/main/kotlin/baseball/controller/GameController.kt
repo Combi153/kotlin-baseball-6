@@ -1,7 +1,6 @@
 package baseball.controller
 
 import baseball.domain.Computer
-import baseball.domain.GameResult
 import baseball.service.GameService
 import baseball.view.InputView
 import baseball.view.OutputView
@@ -14,21 +13,16 @@ class GameController(
 
     fun run() {
         outputView.printStart()
-
-        var gameCommand: GameCommand = GameCommand.play()
-
-        while (gameCommand.isPlaying()) {
+        do {
             play(Computer.withRandomBall())
-            gameCommand = inputView.readGameCommand()
-        }
+            val gameCommand = inputView.readGameCommand()
+        } while (gameCommand.isPlaying())
     }
 
     private fun play(computer: Computer) {
-        var gameResult: GameResult
-
         do {
             val playerBall = inputView.readPlayerBall()
-            gameResult = gameService.play(computer, playerBall)
+            val gameResult = gameService.play(computer, playerBall)
             outputView.printResult(gameResult)
         } while (!gameResult.isEnd())
 

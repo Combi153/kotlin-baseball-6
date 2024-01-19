@@ -18,10 +18,4 @@ class GameCommand(private val command: String) {
     fun isPlaying(): Boolean {
         return command == GAME_START
     }
-
-    companion object {
-        fun play(): GameCommand {
-            return GameCommand(GAME_START)
-        }
-    }
 }
