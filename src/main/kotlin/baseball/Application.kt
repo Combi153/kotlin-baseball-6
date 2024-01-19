@@ -1,5 +1,11 @@
 package baseball
 
+import baseball.controller.GameController
+import baseball.service.GameService
+import baseball.view.InputView
+import baseball.view.OutputView
+
 fun main() {
-    TODO("프로그램 구현")
+    val gameController = GameController(InputView(), OutputView(), GameService())
+    gameController.run()
 }
