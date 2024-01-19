@@ -16,11 +16,11 @@ class PlayerBall(numbers: String) {
     }
 
     private fun validateBalls(balls: List<String>) {
-        if (!isNumberBall(balls)) {
-            throw IllegalArgumentException("숫자만 입력할 수 있습니다.")
+        require(isNumberBall(balls)) {
+            "숫자만 입력할 수 있습니다."
         }
-        if (balls.size != VALID_BALLS_SIZE) {
-            throw IllegalArgumentException("숫자는 3개를 입력해야 합니다.")
+        require(balls.size == VALID_BALLS_SIZE) {
+            "숫자는 3개를 입력해야 합니다."
         }
     }
 

@@ -10,8 +10,8 @@ class GameCommand(private val command: String) {
     }
 
     private fun validateCommand() {
-        if (command != GAME_START && command != GAME_END) {
-            throw IllegalArgumentException("유효하지 않은 명령어입니다. 입력 값 : $command")
+        require(command == GAME_START || command == GAME_END) {
+            "유효하지 않은 명령어입니다. 입력 값 : $command"
         }
     }
 
