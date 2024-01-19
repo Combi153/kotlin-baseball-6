@@ -14,14 +14,16 @@ class OutputView {
     fun printResult(gameResult: GameResult) {
         val stringJoiner = StringJoiner(DELIMITER)
 
-        if (gameResult.hasBall()) {
-            stringJoiner.add("${gameResult.ballCount}볼")
-        }
-        if (gameResult.hasStrike()) {
-            stringJoiner.add("${gameResult.strikeCount}스트라이크")
-        }
-        if (gameResult.hasNoCount()) {
-            stringJoiner.add("낫싱")
+        with(gameResult) {
+            if (hasBall()) {
+                stringJoiner.add("${ballCount}볼")
+            }
+            if (hasStrike()) {
+                stringJoiner.add("${strikeCount}스트라이크")
+            }
+            if (hasNoCount()) {
+                stringJoiner.add("낫싱")
+            }
         }
 
         println(stringJoiner.toString())
