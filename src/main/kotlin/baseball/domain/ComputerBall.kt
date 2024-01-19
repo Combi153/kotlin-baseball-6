@@ -9,6 +9,6 @@ class ComputerBall(val numbers: List<Int>) {
     }
 
     fun countCorrectBalls(balls: List<Int>): Int {
-        return (START_INDEX until numbers.size).count { idx -> numbers[idx] == balls[idx] }
+        return numbers.filterIndexed { index, number -> number == balls[index] }.size
     }
 }
