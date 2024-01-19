@@ -25,6 +25,6 @@ class PlayerBall(numbers: String) {
     }
 
     private fun isNumberBall(balls: List<String>): Boolean {
-        return balls.all { ball -> ball.matches(NUMBER_REGEX.toRegex()) }
+        return balls.all { it.toIntOrNull() != null }
     }
 }
